@@ -1,0 +1,477 @@
+daniil@daniil-VirtualBox:~$ cat > Pets
+
+собаки
+
+кошки
+
+хомяки
+
+
+
+
+
+^Z
+
+[1]+  Остановлен    cat > Pets
+
+daniil@daniil-VirtualBox:~$ cat > Pack_animals
+
+лошади
+
+верблюды
+
+ослы
+
+^Z
+
+[2]+  Остановлен    cat > Pack_animals
+
+daniil@daniil-VirtualBox:~$ cat Pets Pack_animals > Animals
+
+daniil@daniil-VirtualBox:~$ cat Animals
+
+собаки
+
+кошки
+
+хомяки
+
+
+
+
+
+лошади
+
+верблюды
+
+ослы
+
+daniil@daniil-VirtualBox:~$ mv Animals Human_Friends
+
+daniil@daniil-VirtualBox:~$ mkdir animals
+
+daniil@daniil-VirtualBox:~$ mv Human_Friends animals
+
+daniil@daniil-VirtualBox:~$ cd animals/
+
+daniil@daniil-VirtualBox:~/animals$ ll
+
+итого 12
+
+drwxrwxr-x  2 daniil daniil 4096 янв  5 17:22 ./
+
+drwxr-x--- 16 daniil daniil 4096 янв  5 17:22 ../
+
+-rw-rw-r--  1 daniil daniil   80 янв  5 17:21 Human_Friends
+
+daniil@daniil-VirtualBox:~/animals$ ^[[200~wget https://dev.mysql.com/get/mysql-apt-config_0.8.26-1_all.deb~
+
+wget: команда не найдена
+
+daniil@daniil-VirtualBox:~/animals$
+
+daniil@daniil-VirtualBox:~/animals$ wget https://dev.mysql.com/get/mysql-apt-config_0.8.26-1_all.deb
+
+--2024-01-05 17:23:47--  https://dev.mysql.com/get/mysql-apt-config_0.8.26-1_all.deb
+
+Распознаётся dev.mysql.com (dev.mysql.com)… 23.52.29.249, 2a02:26f0:1200:682::2e31, 2a02:26f0:1200:680::2e31
+
+Подключение к dev.mysql.com (dev.mysql.com)|23.52.29.249|:443... соединение установлено.
+
+HTTP-запрос отправлен. Ожидание ответа… 302 Moved Temporarily
+
+Адрес: https://repo.mysql.com//mysql-apt-config_0.8.26-1_all.deb [переход]
+
+--2024-01-05 17:23:49--  https://repo.mysql.com//mysql-apt-config_0.8.26-1_all.deb
+
+Распознаётся repo.mysql.com (repo.mysql.com)… 23.201.249.199, 2a02:26f0:480:78d::1d68, 2a02:26f0:480:787::1d68
+
+Подключение к repo.mysql.com (repo.mysql.com)|23.201.249.199|:443... соединение установлено.
+
+HTTP-запрос отправлен. Ожидание ответа… 200 OK
+
+Длина: 18088 (18K) [application/x-debian-package]
+
+Сохранение в: ‘mysql-apt-config_0.8.26-1_all.deb’
+
+
+
+mysql-apt-config_0. 100%[===================>]  17,66K  --.-KB/s    за 0s
+
+
+
+2024-01-05 17:23:50 (218 MB/s) - ‘mysql-apt-config_0.8.26-1_all.deb’ сохранён [18088/18088]
+
+
+
+daniil@daniil-VirtualBox:~/animals$ sudo dpkg -i mysql-apt-config_0.8.26-1_all.deb
+
+[sudo] пароль для daniil:
+
+dpkg: ошибка: блокировка клиентской части dpkg заблокирована другим процессом c pid 5661
+
+Note: removing the lock file is always wrong, and can end up damaging the
+
+locked area and the entire system. See <https://wiki.debian.org/Teams/Dpkg/FAQ>.
+
+daniil@daniil-VirtualBox:~/animals$ ^[[200~sudo apt install mysql-client mysql-community-server mysql-server~
+
+sudo: команда не найдена
+
+daniil@daniil-VirtualBox:~/animals$ sudo apt install mysql-client mysql-community-server mysql-server~
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is heWaiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 5661 (unattended-upgr)
+
+Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is he^Z by process 5661 (unattended-upgr)... 109s
+
+[3]+  Остановлен    sudo apt install mysql-client mysql-community-server mysql-server~
+
+daniil@daniil-VirtualBox:~/animals$ sudo apt update~
+
+E: Неверная операция update~
+
+daniil@daniil-VirtualBox:~/animals$ sudo apt update
+
+Сущ:1 http://ru.archive.ubuntu.com/ubuntu jammy InRelease
+
+Пол:2 http://ru.archive.ubuntu.com/ubuntu jammy-updates InRelease [119 kB]
+
+Сущ:3 http://ru.archive.ubuntu.com/ubuntu jammy-backports InRelease
+
+Пол:4 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]
+
+Получено 229 kB за 4с (61,2 kB/s)
+
+
+
+^Z
+
+[4]+  Остановлен    sudo apt update
+
+daniil@daniil-VirtualBox:~/animals$ sudo mysql_secure_installation
+
+sudo: mysql_secure_installation: команда не найдена
+
+daniil@daniil-VirtualBox:~/animals$ sudo mysql_secure_installation
+
+sudo: mysql_secure_installation: команда не найдена
+
+daniil@daniil-VirtualBox:~/animals$ sudo mysql
+
+sudo: mysql: команда не найдена
+
+daniil@daniil-VirtualBox:~/animals$ apt download lftp
+
+Пол:1 http://ru.archive.ubuntu.com/ubuntu jammy/main amd64 lftp amd64 4.9.2-1build1 [720 kB]
+
+Получено 720 kB за 3с (217 kB/s)
+
+daniil@daniil-VirtualBox:~/animals$ sudo dpkg -i lftp_4.9.2-1build1_amd64.deb
+
+dpkg: ошибка: блокировка клиентской части dpkg заблокирована другим процессом c pid 5661
+
+Note: removing the lock file is always wrong, and can end up damaging the
+
+locked area and the entire system. See <https://wiki.debian.org/Teams/Dpkg/FAQ>.
+
+daniil@daniil-VirtualBox:~/animals$ sudo dpkg -i lftp_4.9.2-1build1_amd64.deb
+
+dpkg: ошибка: блокировка клиентской части dpkg заблокирована другим процессом c pid 5661
+
+Note: removing the lock file is always wrong, and can end up damaging the
+
+locked area and the entire system. See <https://wiki.debian.org/Teams/Dpkg/FAQ>.
+
+daniil@daniil-VirtualBox:~/animals$ sudo dpkg -r lftp
+
+dpkg: ошибка: блокировка клиентской части dpkg заблокирована другим процессом c pid 5661
+
+Note: removing the lock file is always wrong, and can end up damaging the
+
+locked area and the entire system. See <https://wiki.debian.org/Teams/Dpkg/FAQ>.
+
+daniil@daniil-VirtualBox:~/animals$ history
+
+
+   57  cat Pets.txt
+
+   58  touch animals_file
+
+   59  ls
+
+   60  cat animals_file
+
+   61  pwd
+
+   62  touch Pets
+
+   63  touch Pack_animals
+
+   64  cat Pets
+
+   65  cat Pack_animals
+
+   66  ls
+
+   67  -rm animals_file
+
+   68  cat > Pets
+
+   69  cat > Pack_animals
+
+   70  cat Pets Pack_animals > Animals
+
+   71  cat Animals
+
+   72  mv Animals Human_Friends
+
+   73  mkdir animals
+
+   74  mv Human_Friends animals
+
+   75  cd animals/
+
+   76  ll
+
+   77  wget https://dev.mysql.com/get/mysql-apt-config_0.8.26-1_all.deb~
+
+   78  wget https://dev.mysql.com/get/mysql-apt-config_0.8.26-1_all.deb
+
+   79  sudo dpkg -i mysql-apt-config_0.8.26-1_all.deb
+
+   80  sudo apt install mysql-client mysql-community-server mysql-server~
+
+   81  sudo apt install mysql-client mysql-community-server mysql-server~
+
+   82  sudo apt update~
+
+   83  sudo apt update
+
+   84  sudo mysql_secure_installation
+
+   85  sudo mysql
+
+   86  apt download lftp
+
+   87  sudo dpkg -i lftp_4.9.2-1build1_amd64.deb
+
+   88  sudo dpkg -r lftp
+
+   89  history
+
